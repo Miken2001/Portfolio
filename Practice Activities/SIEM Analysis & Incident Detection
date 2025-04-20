@@ -1,0 +1,62 @@
+# 🧭 SIEM Log Analysis & Threat Detection
+
+## 🎯 Objective  
+This activity focused on simulating real-world Security Operations Center (SOC) workflows using a **Security Information and Event Management (SIEM)** system. The goal was to detect and investigate suspicious activity within logs, understand how alerts are generated, and practice decision-making as a security analyst.
+
+The scenario included alerts triggered by login anomalies, file changes, or unauthorized network activity — requiring structured incident response thinking.
+
+---
+
+## 🧠 Skills Learned  
+- Developed practical understanding of SIEM functionality  
+- Analyzed event logs to trace suspicious user behavior  
+- Interpreted alerts and mapped them to security incidents  
+- Identified security events vs false positives  
+- Practiced incident response logic aligned with playbook phases
+
+---
+
+## 🛠️ Tools Used  
+- 🔎 Simulated SIEM dashboard (Microsoft Sentinel, Splunk, or Elastic stack logic)  
+- 📈 Log files: Authentication events, network activity, endpoint alerts  
+- 🗂️ Incident response playbooks  
+- 📚 MITRE ATT&CK mappings (theoretical, not directly used)
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Understand the Alert  
+- Received alert: "Multiple failed login attempts followed by a successful login"  
+- Context: Unusual time of access, geolocation inconsistency
+
+---
+
+### 📌 Step 2: Log Analysis  
+- Reviewed log entries for:
+  - Username and IP used
+  - Time of access
+  - Source geolocation and device type
+- Correlated login times and endpoints to verify if behavior matched normal patterns
+
+---
+
+### 📌 Step 3: Incident Investigation  
+- Identified sequence:
+  1. Repeated login failures  
+  2. One successful login from unusual location  
+  3. Privilege escalation attempt or file access after login
+
+---
+
+### 📌 Step 4: Incident Response  
+Mapped actions to IR playbook phases:
+- **Detection:** SIEM alert triggered by login pattern anomaly  
+- **Analysis:** Verified risk through cross-log inspection  
+- **Containment:** Flagged account, triggered access review  
+- **Recovery:** Recommended forced password reset, endpoint scanning  
+- **Lessons Learned:** Suggested alert tuning and geo-based access control
+
+---
+
+✅ **Outcome:** Completed end-to-end detection workflow using simulated SIEM data. Strengthened understanding of how SOC analysts investigate threats, correlate log events, and respond with structured procedures.
