@@ -1,0 +1,60 @@
+# 🔐 Botium Toys Internal Security Audit
+
+## 🎯 Objective
+This project involved performing an internal **security audit** for Botium Toys, a growing U.S.-based toy company expanding its online operations. As part of the IT team, the goal was to evaluate existing security controls, identify vulnerabilities, and ensure compliance with regulations — especially in regard to payment processing and GDPR (EU compliance).
+
+The audit followed a **controls and compliance checklist** format to assess whether security best practices were being met.
+
+---
+
+## 🧠 Skills Learned
+- How to conduct an internal audit using checklists
+- Assessment of physical and logical asset protection controls
+- Evaluation of organizational compliance with regulations (e.g., PCI-DSS, GDPR)
+- Application of the **NIST Cybersecurity Framework**
+- Writing concise audit reports and mitigation recommendations
+
+---
+
+## 🛠️ Tools Used
+- ✅ Controls & Compliance Checklist Template (provided in course)
+- 📁 Risk Assessment & Asset List Document (Botium Toys scenario)
+- 📖 NIST CSF as the guiding framework for security domains
+- 📝 Manual evaluation and policy analysis (hypothetical)
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Review Audit Scope
+- Reviewed Botium’s growing online infrastructure and increased risk surface
+- Identified main concerns: weak access control, lack of compliance planning, limited IT resources
+
+---
+
+### 📌 Step 2: Analyze Assets and Risks
+- Assets evaluated: web server, customer database, employee devices, payment systems
+- Risks included: unauthorized access, non-compliance fines, data leakage
+
+---
+
+### 📌 Step 3: Complete Controls Checklist
+Key areas assessed:
+- 🔒 Access Control  
+- 🔁 Data Retention & Disposal  
+- 🔐 Encryption Practices  
+- 👥 Identity & Access Management (IAM)  
+- 📑 Security Policies & Procedures  
+- 📊 Monitoring & Logging
+
+---
+
+### 📌 Step 4: Make Recommendations
+| Control Area        | Audit Result | Recommendation                                    |
+|---------------------|--------------|---------------------------------------------------|
+| Access Management   | No           | Implement RBAC and MFA                            |
+| Data Disposal       | Partial      | Introduce automated data purging and audit logs   |
+| GDPR Compliance     | No           | Train staff on privacy handling and PII rules     |
+| Encryption in Transit | Yes        | Maintain SSL/TLS practices                        |
+
+---
