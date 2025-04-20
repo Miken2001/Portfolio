@@ -1,0 +1,45 @@
+name: Split & Upload Exercises
+
+on:
+  schedule:
+    - cron: "0 12 */2 * *" # every 2 days
+  workflow_dispatch:
+
+jobs:
+  upload_exercises:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Split exercises from all-exercises.txt
+        run: |
+          mkdir -p exercises
+          mkdir -p processed
+
+          awk '/^===START_EXERCISE===/,/^===END_EXERCISE===/' all-exercises.txt | \
+          csplit -z -f temp_ - '/^===START_EXERCISE===/' '{*}' || true
+
+          count=0
+          for f in temp_*; do
+            hash=$(sha1sum "$f" | cut -d ' ' -f1)
+            if [ ! -f "processed/$hash" ] && [ "$count" -lt 2 ]; then
+              filename="exercise_$(date +%s)_$count.md"
+              sed '1d;$d' "$f" > exercises/$filename
+              touch processed/$hash
+              git add exercises/$filename
+              echo "Uploaded $filename"
+              count=$((count + 1))
+            fi
+            rm "$f"
+          done
+
+          git commit -m "🚀 Uploaded 1-2 new exercises from all-exercises.txt [skip ci]" || echo "No changes"
+      - name: Push changes
+        run: git push
