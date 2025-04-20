@@ -1,16 +1,220 @@
 ===START_EXERCISE===
-# Exercise Title: PASTA Threat Model
+# 📡 tcpdump Network Packet Analysis – DNS Failure
 
-**Date:** April 12, 2025
+## 🎯 Objective  
+This hands-on activity simulated a network outage affecting access to a company website. Using **tcpdump**, I analyzed packet data to determine the root cause of the connectivity issue. The goal was to investigate the **“Destination port unreachable”** error and confirm whether DNS resolution was failing due to a misconfigured or unavailable service.
 
-[...your content here...]
+---
 
+## 🧠 Skills Learned  
+- Used tcpdump to capture and analyze live network traffic  
+- Identified protocol-specific issues (UDP, DNS, ICMP)  
+- Traced errors related to unreachable services (e.g., port 53 for DNS)  
+- Practiced root cause analysis based on packet behavior  
+- Strengthened understanding of IP addressing and protocol flow
+
+---
+
+## 🛠️ Tools Used  
+- 🧪 **tcpdump** – to capture raw packet data and inspect network requests  
+- 🌐 **Browser** – to simulate traffic to the failing website  
+- 📄 **Log inspection** – to interpret timestamps, source/destination IPs, and protocol-level errors
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Simulate the Issue  
+- Attempted to visit `www.yummyrecipesforme.com`  
+- Received `Destination port unreachable` error in the browser  
+- Confirmed that DNS resolution was likely failing
+
+### 📌 Step 2: Run tcpdump  
+- Captured packets during the site access attempt  
+- Observed outgoing **UDP** requests to port `53` (DNS standard port)  
+- Logged incoming **ICMP** responses indicating:  
+  `udp port 53 unreachable` from DNS server
+
+### 📌 Step 3: Analyze Logs  
+- Timestamps confirmed packet flow  
+- Source IP: my device (`192.51.100.15`)  
+- Destination IP: DNS server (`203.0.113.2.domain`)  
+- ICMP error message showed DNS port was not responding
+
+### 📌 Step 4: Conclude Root Cause  
+- DNS server was not listening or not available on port 53  
+- Application-layer services were fine, but network-layer name resolution failed  
+- Concluded that the DNS outage prevented users from reaching the website
+
+✅ **Outcome:** Successfully used packet-level analysis to diagnose a network-layer service failure. Demonstrated ability to interpret protocol behavior, trace failed connections, and identify infrastructure misconfigurations in a real-world scenario.
 ===END_EXERCISE===
+
 ===START_EXERCISE===
-# Exercise Title: Phishing Simulation Report
+# 🎣 ExecuTalk Phishing Email Analysis
 
-**Date:** April 11, 2025
+## 🎯 Objective
+Investigate a spear phishing email received by an executive and determine whether it poses a security threat. Evaluate the header, content, links, and associated domains to decide whether to quarantine the email.
 
-[...your next content here...]
+---
 
+## 🧠 Skills Learned
+- Analyzed email headers and suspicious domains
+- Evaluated social engineering techniques in emails
+- Investigated spoofed sender domains
+- Identified malicious download prompts and phishing landing pages
+
+---
+
+## 🛠️ Tools Used
+- 📧 Email client header inspection
+- 🔗 URL analysis
+- 🕵️ Manual inspection of landing page design
+- 💡 Critical thinking for legitimacy verification
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Review Email Header
+- Sender address was `imaginarybank@gmail.org` instead of corporate domain
+- Subject line had grammar issues: “You are been added...”
+- Message timestamp was a weekend (off business hours)
+
+### 📌 Step 2: Analyze Email Body
+- Presented as a collaboration invite from ExecuTalk
+- Used fake urgency: “expires in 48 hours”
+- Buttons led to fake login page mimicking ExecuTalk
+
+### 📌 Step 3: URL Investigation
+- Links led to `my.site.net/pwnexecs` instead of legit ExecuTalk domain
+- Login form used on landing page to steal credentials
+
+✅ **Outcome:** Flagged the email as phishing. Email was quarantined, and reported to the IT security team. A security awareness reminder was sent to employees.
 ===END_EXERCISE===
+
+===START_EXERCISE===
+# 🌊 SYN Flood DoS Attack Incident Response
+
+## 🎯 Objective
+Respond to a Distributed Denial of Service (DDoS) incident caused by a SYN flood targeting the company’s web server. Identify attack type, steps taken, and recommendations for prevention.
+
+---
+
+## 🧠 Skills Learned
+- Recognized SYN flood patterns in network traffic
+- Responded to abnormal spikes in TCP SYN requests
+- Implemented traffic filtering and IP blacklisting
+- Communicated incident resolution with stakeholders
+
+---
+
+## 🛠️ Tools Used
+- 🌐 Web browser to confirm service unavailability
+- 📈 Network monitor to log incoming requests
+- 🔥 Firewall rules to block malicious traffic
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Incident Detection
+- Website returned timeout errors to users
+- SYN flood traffic detected from unfamiliar IPs
+
+### 📌 Step 2: Investigation
+- Traffic was abnormally high with incomplete TCP handshakes
+- Network logs showed repeated SYN packets without ACKs
+
+### 📌 Step 3: Response
+- Web server was taken offline temporarily to prevent damage
+- Configured firewall to block attacking IP address
+
+### 📌 Step 4: Recommendations
+- Deploy rate limiting and SYN cookies
+- Enable DDoS protection from hosting provider
+- Add IDS/IPS for ongoing monitoring
+
+✅ **Outcome:** Web server was restored, and attack mitigated. Follow-up steps implemented to protect against future SYN flood attacks.
+===END_EXERCISE===
+
+===START_EXERCISE===
+# 💾 USB Baiting – Attack Vector Analysis
+
+## 🎯 Objective
+Investigate the risk of USB baiting in a hospital setting after discovering a suspicious USB device in the parking lot. Analyze the potential attack vectors and recommend a secure procedure.
+
+---
+
+## 🧠 Skills Learned
+- Evaluated risks of removable media
+- Used virtualization to safely inspect suspicious files
+- Identified possible malware payloads via observation
+- Reinforced importance of employee awareness and policy
+
+---
+
+## 🛠️ Tools Used
+- 💻 Virtual machine with isolation
+- 📁 USB mount inspection and monitoring
+- 📝 Risk analysis documentation
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Discovery
+- USB stick with hospital logo found on site
+- Brought to IT department for secure inspection
+
+### 📌 Step 2: Controlled Environment Testing
+- Inserted USB into a sandbox virtual machine
+- Observed that USB auto-executed a suspicious file
+- Simulated payload attempted network beaconing
+
+### 📌 Step 3: Conclusion
+- Classified USB as baiting attempt
+- Possible intent: harvest credentials, install spyware
+
+### 📌 Step 4: Recommendation
+- Enforce strict USB usage policy
+- Conduct awareness training for employees
+- Use endpoint protection with device control features
+
+✅ **Outcome:** USB was flagged and destroyed. Organization updated device policy and trained staff on baiting risks.
+===END_EXERCISE===
+
+===START_EXERCISE===
+# 🛡️ Vulnerability Assessment – Public Database Server
+
+## 🎯 Objective
+Evaluate the security implications of a public-facing database server in an e-commerce environment. Identify risks, business impact, and remediation steps.
+
+---
+
+## 🧠 Skills Learned
+- Identified configuration flaws in hosted infrastructure
+- Assessed risk level for exposed services
+- Developed and communicated remediation plans
+
+---
+
+## 🛠️ Tools Used
+- 🧩 Vulnerability scanning reports
+- 🔍 Manual risk assessment techniques
+- 🗂️ Policy review and configuration guides
+
+---
+
+## 🪜 Key Issues
+- The database was exposed to the public internet
+- No IP whitelisting or VPN tunneling required
+- Default admin credentials were unchanged
+
+### 🔐 Recommendation
+- Restrict database access using VPN or private IP range
+- Rotate and strengthen credentials
+- Enable logging and intrusion detection for audit trail
+
+✅ **Outcome:** Identified and remediated a critical vulnerability. Configuration was updated to restrict access to internal systems only.
+===END_EXERCISE===
+
