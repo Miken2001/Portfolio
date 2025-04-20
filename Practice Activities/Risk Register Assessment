@@ -1,0 +1,67 @@
+# 📋 Risk Register Assessment
+
+## 🎯 Objective
+The **Risk Register Assessment** activity focused on identifying, evaluating, and prioritizing security risks that could impact a company’s operations. The goal was to determine the **likelihood** and **severity** of various cyber threats, calculate an overall **risk score**, and learn how to prioritize mitigation efforts accordingly.
+
+This exercise helped build foundational knowledge of risk management — a core competency for cybersecurity professionals.
+
+---
+
+## 🧠 Skills Learned
+- Developed a working understanding of risk assessment methodology
+- Practiced assigning likelihood and impact/severity scores to threats
+- Learned to calculate risk scores and rank threats by priority
+- Gained experience in analyzing and documenting security risks
+- Applied critical thinking to improve organizational risk posture
+
+---
+
+## 🛠️ Tools Used
+- 📊 **Spreadsheet tools** (Google Sheets / Excel) for building a risk register
+- 🧮 **Scoring rubric** to assess risk (scale of 1–5 for both likelihood and severity)
+- 📚 **NIST CSF** framework as a reference to contextualize threats and categories
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Create the Risk Register Table
+Define the columns as follows:
+- `Threat`
+- `Likelihood (1–5)`
+- `Severity (1–5)`
+- `Risk Score` (`Likelihood x Severity`)
+- `Mitigation Plan`
+
+---
+
+### 📌 Step 2: Identify and Document Threats
+Examples of threats analyzed:
+- Phishing email campaigns  
+- Unpatched software vulnerabilities  
+- Weak or reused passwords  
+- Insider threats  
+- Misconfigured firewall settings  
+
+---
+
+### 📌 Step 3: Score and Prioritize
+Each threat was scored by likelihood and severity. Example:
+
+| Threat                    | Likelihood | Severity | Risk Score |
+|---------------------------|------------|----------|------------|
+| Phishing Email Campaign   | 5          | 4        | 20         |
+| Unpatched Software        | 4          | 4        | 16         |
+| Weak Passwords            | 3          | 3        | 9          |
+| Insider Threat            | 2          | 5        | 10         |
+| Misconfigured Firewall    | 3          | 4        | 12         |
+
+---
+
+### 📌 Step 4: Plan for Mitigation
+Focus resources on high-risk items first. For example:
+- **Phishing**: Deploy awareness training, implement email filters  
+- **Unpatched Software**: Introduce automated patch management  
+- **Weak Passwords**: Enforce stronger password policies and MFA
+
+---
