@@ -1,0 +1,47 @@
+# 🎣 Phishing Email Investigation
+
+## 🎯 Objective  
+In this investigation, I acted as a security analyst for **Imaginary Bank**, tasked with analyzing a suspicious spear phishing email received by an executive. The email prompted the user to download unfamiliar software (“ExecuTalk”) from an unverified source. My role was to examine the email header, body content, and URLs to determine if it was a phishing attempt and recommend whether it should be quarantined.
+
+---
+
+## 🧠 Skills Learned  
+- Identified characteristics of spear phishing and social engineering  
+- Analyzed email headers and sender domains for authenticity  
+- Evaluated suspicious download links and spoofed login forms  
+- Applied decision-making in incident response workflows  
+- Strengthened ability to communicate cyber risk to stakeholders
+
+---
+
+## 🛠️ Tools Used  
+- Email analysis (header + body inspection)  
+- URL inspection through hover-preview methods  
+- Applied phishing identification checklist from course materials  
+- Policy decision-making regarding quarantine vs allow actions
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Header Analysis  
+- Discovered the sender used a personal domain (`@gmail.org`) instead of the official bank domain.  
+- The subject line included grammar errors and appeared to be a fake "reply" to gain trust.
+
+### 📌 Step 2: Email Body Breakdown  
+- Spotted brand impersonation and urgency language: “Invitation expires in 48 hours”  
+- Download options mimicked legitimate software for Mac, Windows, and Android  
+- The message contained multiple typos (“Conglaturations”, “Downlode”), signaling poor-quality spoofing
+
+### 📌 Step 3: Link Inspection  
+- Hovered over download links revealed a suspicious domain: `my.site.net/pwnexecs/`  
+- The spoofed login page resembled a legitimate app login screen but had an untrusted URL
+
+### 📌 Step 4: Final Decision  
+- Email confirmed to be a **spear phishing attempt**  
+- Recommended the message be **quarantined** and reported internally  
+- Suggested awareness training for executives and enabling domain-based email authentication (e.g., DMARC)
+
+---
+
+✅ **Outcome:** Correctly identified a spear phishing attack, practiced safe email inspection procedures, and supported incident response with a clear, actionable recommendation.
