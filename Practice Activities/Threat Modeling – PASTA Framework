@@ -1,0 +1,81 @@
+# 🧠 Threat Modeling – PASTA Framework
+
+## 🎯 Objective  
+This project simulated a full **threat modeling exercise** using the **PASTA (Process for Attack Simulation and Threat Analysis)** framework. The goal was to identify threats and vulnerabilities for a soon-to-launch sneaker marketplace app, and recommend risk mitigation strategies based on evidence gathered across PASTA’s seven stages.
+
+---
+
+## 🧠 Skills Learned  
+- Applied all 7 stages of the PASTA threat modeling framework  
+- Identified application vulnerabilities and attack vectors  
+- Evaluated technical scope, assets, and entry points  
+- Mapped threats to system components using attack trees  
+- Delivered actionable security recommendations tied to risk levels
+
+---
+
+## 🛠️ Tools Used  
+- PASTA framework (7-stage threat modeling process)  
+- Data flow diagramming (conceptual)  
+- Application logic decomposition  
+- Threat analysis + attack tree methodology
+
+---
+
+## 🪜 Steps (PASTA Stages)
+
+### 📌 Stage 1: Define Business & Security Objectives  
+- Protect user data (name, address, payment info)  
+- Ensure app availability for buying/selling sneakers  
+- Comply with data privacy regulations (e.g., GDPR)
+
+---
+
+### 📌 Stage 2: Define Technical Scope  
+- Mobile app (iOS & Android)  
+- APIs handling authentication, inventory, and payment  
+- Cloud-hosted backend and database  
+- User roles: buyers, sellers, admins
+
+---
+
+### 📌 Stage 3: Decompose the Application  
+- Identified data flows between app, API, and database  
+- Components: login/auth service, product catalog, checkout system  
+- Existing controls: hashed passwords, session tokens, basic input validation
+
+---
+
+### 📌 Stage 4: Perform Threat Analysis  
+- Potential threats identified:
+  - API abuse through fuzzing or parameter tampering  
+  - Credential stuffing against login endpoint  
+  - Business logic manipulation (e.g., fake listings or price changes)
+
+---
+
+### 📌 Stage 5: Perform Vulnerability Analysis  
+- Found gaps in input validation  
+- No rate limiting on login and sensitive endpoints  
+- Improper session expiration for inactive users
+
+---
+
+### 📌 Stage 6: Conduct Attack Modeling  
+- Built attack tree:
+  - Root: Unauthorized account takeover  
+  - Branches: Weak passwords, brute force, exposed tokens  
+- Mapped threats to specific components in architecture
+
+---
+
+### 📌 Stage 7: Analyze Risk and Impact  
+- High-impact vulnerabilities: credential reuse, API injection  
+- Suggested mitigations:
+  - Implement MFA  
+  - Add rate limiting and WAF rules  
+  - Use token expiration and session lifecycle controls
+
+---
+
+✅ **Outcome:** Successfully conducted a complete threat model using the PASTA framework. Identified real-world risks and proposed clear mitigations, demonstrating ability to secure software pre-launch.
