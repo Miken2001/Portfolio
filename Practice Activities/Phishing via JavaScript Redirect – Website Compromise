@@ -1,0 +1,65 @@
+# 🎭 Phishing via JavaScript Redirect – Website Compromise
+
+## 🎯 Objective  
+This project simulated a **realistic phishing campaign** where a malicious insider performed a **brute force attack** to gain admin access to a live website. After breaching the CMS, the attacker injected **JavaScript code** into the source to trigger a file download and redirect visitors to a spoofed phishing domain.
+
+As a cybersecurity analyst, I investigated the network activity, analyzed the attack pattern, and recommended mitigation strategies.
+
+---
+
+## 🧠 Skills Learned  
+- Identified symptoms of a client-side code injection (JavaScript redirect)  
+- Analyzed domain redirection behavior using DNS and HTTP request flow  
+- Investigated downloaded payloads in a safe environment (sandbox logic)  
+- Learned to trace web-based threats from front-end manipulation  
+- Developed skills in source code review and incident reporting
+
+---
+
+## 🛠️ Tools Used  
+- 🔍 Browser Dev Tools (for inspecting script behavior and redirects)  
+- 🧪 tcpdump or packet capture logic (DNS + HTTP tracking)  
+- 🧼 Sandboxed test environment (for safe file execution)  
+- 🔐 Access control audit and code integrity checks
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Detect the Issue  
+- Users reported being prompted to download a file when visiting `yummyrecipesforme.com`  
+- Upon running the file, users were redirected to a spoofed domain: `greatrecipesforme.com`  
+- Devices experienced performance issues post-download (malware suspected)
+
+---
+
+### 📌 Step 2: Simulate & Analyze  
+- Launched a test in a sandboxed environment  
+- Captured DNS and HTTP traffic using tcpdump  
+- Noticed JavaScript embedded in the page source: triggered download and redirect
+
+---
+
+### 📌 Step 3: Source Code Investigation  
+- Inspected the website’s HTML and JavaScript  
+- Identified suspicious script calling a file download and pointing to `my.site.net/payload.exe`  
+- Verified that the redirect was hardcoded to spoofed domain
+
+---
+
+### 📌 Step 4: Determine Root Cause  
+- Admin panel access was gained using **default credentials**  
+- No brute-force protection or MFA on login  
+- Lack of integrity checks allowed source file modification
+
+---
+
+### 📌 Step 5: Recommend Mitigations  
+- Enforce **strong, non-default passwords** and add **MFA**  
+- Conduct regular **source code integrity scans**  
+- Implement **rate limiting and lockouts** on admin login  
+- Educate users on **download prompts and spoofed domains**
+
+---
+
+✅ **Outcome:** Identified and contained a web-based phishing campaign involving script injection and credential abuse. Delivered root-cause analysis and recommended layered defenses to reduce similar risks in the future.
