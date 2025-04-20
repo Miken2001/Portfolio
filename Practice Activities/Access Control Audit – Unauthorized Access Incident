@@ -1,0 +1,58 @@
+# 🔐 Access Control Audit – Unauthorized Access Incident
+
+## 🎯 Objective  
+This activity involved investigating a security incident in which a payment was initiated to an unauthorized bank account. As the newly hired cybersecurity professional, I reviewed system access logs, identified weaknesses in access control, and recommended specific mitigations to prevent future unauthorized actions.
+
+The scenario emphasized the importance of authentication, authorization, and access logging in maintaining a secure system.
+
+---
+
+## 🧠 Skills Learned  
+- Analyzed user activity logs for suspicious behavior  
+- Identified gaps in access control implementation  
+- Applied principles of least privilege and separation of duties  
+- Recommended actionable access control mitigations  
+- Practiced incident triage from a business-focused security lens
+
+---
+
+## 🛠️ Tools Used  
+- Access control logs (simulated)  
+- Security audit checklist  
+- Manual log inspection and behavior tracing  
+- Policy recommendation writing
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Log Analysis  
+- Investigated access logs to identify users with permissions to authorize payments  
+- Traced the timeline of when the unauthorized transaction was initiated  
+- Detected an account with elevated privileges that should not have had financial access
+
+---
+
+### 📌 Step 2: Identify Threat Actor  
+- User was authenticated successfully (not an external compromise)  
+- Activity indicated internal misuse or a misconfigured role  
+- Highlighted need for stricter role-based access controls (RBAC)
+
+---
+
+### 📌 Step 3: Pinpoint Access Control Issues  
+- Lack of **multi-factor authentication (MFA)**  
+- Excessive privileges granted to non-finance team members  
+- Missing audit trail for role or permission changes
+
+---
+
+### 📌 Step 4: Recommend Mitigations  
+- Implement **MFA** for all users with access to financial or sensitive systems  
+- Enforce **role-based access controls** (RBAC) with least privilege principle  
+- Schedule **regular access reviews** and auto-expiration of elevated roles  
+- Enable detailed **logging and alerting** for all payment-related actions
+
+---
+
+✅ **Outcome:** Completed a post-incident access control audit. Discovered security gaps in role assignment and authentication enforcement. Delivered clear technical and procedural mitigations to improve organizational access control and prevent misuse.
