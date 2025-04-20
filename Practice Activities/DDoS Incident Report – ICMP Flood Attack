@@ -1,0 +1,54 @@
+# 🌐 DDoS Incident Report – ICMP Flood Attack
+
+## 🎯 Objective  
+This project simulated a real-world DDoS (Distributed Denial of Service) attack targeting a multimedia company. The network was overwhelmed with ICMP traffic, disrupting internal connectivity and shutting down services. As a security analyst, I documented the event and used the **NIST Cybersecurity Framework (CSF)** to create a strategic plan for detection, response, and prevention.
+
+---
+
+## 🧠 Skills Learned  
+- Identified and analyzed a DDoS attack using protocol-based behavior (ICMP flood)  
+- Applied the five NIST CSF functions: Identify, Protect, Detect, Respond, Recover  
+- Created a layered response plan including firewall rules and traffic filtering  
+- Improved understanding of network behavior and anomaly detection  
+- Practiced recovery planning and business continuity preparation
+
+---
+
+## 🛠️ Tools Used  
+- Incident Report Template  
+- NIST CSF as a security strategy framework  
+- Simulated firewall & IDS/IPS rules to defend against ICMP attacks  
+- Log data analysis to identify traffic patterns and spoofed IPs
+
+---
+
+## 🪜 Steps
+
+### 📌 Step 1: Identify  
+- Discovered network services were unresponsive  
+- Analyzed logs and packet data, confirmed a spike in inbound ICMP packets  
+- Found the source to be a misconfigured firewall allowing flood traffic
+
+### 📌 Step 2: Protect  
+- Implemented a **rate-limiting rule** on incoming ICMP packets  
+- Activated **source IP verification** to block spoofed addresses  
+- Ensured only trusted IP ranges could communicate with internal services
+
+### 📌 Step 3: Detect  
+- Deployed **network monitoring tools** to detect abnormal traffic spikes  
+- Added alerts for rapid ICMP traffic patterns  
+- Enabled **IDS/IPS rules** to flag suspicious protocol behavior
+
+### 📌 Step 4: Respond  
+- Temporarily shut down non-essential services  
+- Blocked the malicious IP ranges at the perimeter firewall  
+- Collaborated with the network team to restore essential functions
+
+### 📌 Step 5: Recover  
+- Documented the event for post-incident review  
+- Hardened firewall configurations and updated incident response playbook  
+- Scheduled simulations to improve future response times
+
+---
+
+✅ **Outcome:** Successfully mitigated the simulated DDoS attack, applied structured incident handling using the NIST CSF, and developed layered defenses to reduce future risk.
